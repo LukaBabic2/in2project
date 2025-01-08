@@ -1,0 +1,46 @@
+﻿@model in2projekt.Models.BlogPostCreateDTO
+@{
+    Layout = null; 
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Blog Post</title>
+    <link rel="stylesheet" href="/css/CreateBlog.css" />
+</head>
+
+<body>
+
+    
+    <h3>Create New Blog Post</h3>
+
+    
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span> 
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Content"></label>
+            <textarea asp-for="Content" class="form-control"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span> 
+        </div>
+
+        
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+
+    
+    <a href="@Url.Action("Index", "Blogs")" class="back-btn">
+        <button class="btn btn-secondary">Back to All Blog Posts</button>
+    </a>
+
+</body>
+</html>

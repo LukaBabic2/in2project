@@ -1,0 +1,148 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Darker background */
+    color: #eaeaea; /* Lighter text for contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h3 {
+    color: #f1f1f1; /* Light color for headings */
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Make title bigger */
+    font-weight: bold;
+}
+
+h4 {
+    color: #f1f1f1; /* Light color for subheadings */
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Slightly bigger than normal text */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px; /* Add more spacing for better readability */
+}
+
+/* Blog post container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #2e3b4e; /* Darker background for the blog container */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog content */
+.blog-content {
+    margin-bottom: 30px; /* Add spacing after the content */
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    resize: none;
+    background-color: #3b4a61; /* Slightly lighter dark background */
+    color: #eaeaea; /* Light text for the textarea */
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Comment Section */
+.comments-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #444;
+    background-color: #2d3b4f; /* Darker background to distinguish the comments section */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.comment {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #3b4a61;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form to add comment */
+form {
+    margin-top: 30px;
+}
+
+    form button {
+        background-color: #28a745;
+    }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+/* Back to posts and Edit/Delete buttons */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #6c757d;
+}
+
+    .back-btn button {
+        background-color: #6c757d;
+    }
+
+        .back-btn button:hover {
+            background-color: #5a6268;
+        }
+
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+    .edit-btn button {
+        background-color: #ffc107;
+    }
+
+        .edit-btn button:hover {
+            background-color: #e0a800;
+        }
+
+    .delete-btn button {
+        background-color: #dc3545;
+    }
+
+        .delete-btn button:hover {
+            background-color: #c82333;
+        }

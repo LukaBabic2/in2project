@@ -1,0 +1,93 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: #eaeaea; /* Light text for contrast */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+/* Page Title */
+h2 {
+    color: #f1f1f1;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Confirmation message */
+.confirmation-message {
+    color: #f1f1f1;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* User Information */
+.user-info {
+    background-color: #2e3b4e;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+    .user-info div {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button, .btn-secondary {
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%;
+}
+
+button {
+    background-color: #dc3545; /* Red color for Delete */
+}
+
+    button:hover {
+        background-color: #c82333;
+    }
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray color for Cancel */
+    text-decoration: none;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }

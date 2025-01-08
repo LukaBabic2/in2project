@@ -1,0 +1,89 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Dark background */
+    color: #eaeaea; /* Light text color */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+}
+
+.confirmation-container {
+    max-width: 600px;
+    background-color: #2e3b4e; /* Darker background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+}
+
+h3 {
+    font-size: 2.5em;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.8em;
+    color: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #d1d1d1;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.btn-confirm {
+    background-color: #dc3545; /* Red color for the delete button */
+    color: white;
+}
+
+    .btn-confirm:hover {
+        background-color: #c82333; /* Darker red when hovering */
+    }
+
+.btn-cancel {
+    background-color: #6c757d; /* Gray color for the cancel button */
+    color: white;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+    .btn-cancel:hover {
+        background-color: #5a6268; /* Darker gray when hovering */
+    }
+
+/* Spacing adjustments */
+form {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}

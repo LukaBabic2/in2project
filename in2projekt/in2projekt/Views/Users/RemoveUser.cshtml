@@ -1,0 +1,35 @@
+﻿@model in2projekt.Models.User
+@{
+    Layout = null;  // Skip the default layout for this page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove User</title>
+    <link rel="stylesheet" href="/css/Deleteing.css" />
+</head>
+
+<body>
+
+    <h2>Remove User</h2>
+
+    <p class="confirmation-message">Are you sure you want to delete the following user?</p>
+
+    <div class="user-info">
+        <div><strong>Username:</strong> @Model.Username</div>
+        <div><strong>Email:</strong> @Model.Email</div>
+    </div>
+
+    <form asp-action="RemoveUser" method="post" class="form-container">
+        <input type="hidden" asp-for="Id" />
+        <div class="button-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="ListUsers" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+
+</body>
+</html>

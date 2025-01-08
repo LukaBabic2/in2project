@@ -1,0 +1,48 @@
+﻿@model in2projekt.Models.ViewModels.UserViewModel
+
+@{
+    Layout = null;  // Skip the default layout for this page
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="/css/EditUser.css" />
+</head>
+
+<body>
+
+    <h2>Edit User</h2>
+
+    <form asp-action="EditUser" method="post" class="form-container">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Username">Username</label>
+            <input asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password">New Password (optional)</label>
+            <input asp-for="Password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a asp-action="ListUsers" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+
+</body>
+</html>

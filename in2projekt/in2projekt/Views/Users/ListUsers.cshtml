@@ -1,0 +1,52 @@
+﻿@model IEnumerable<in2projekt.Models.User>
+
+@{
+    Layout = null; 
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="/css/ListUsers.css" />
+</head>
+
+<body>
+
+    <h2>User Management</h2>
+
+    <div class="user-table-container">
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Username</td>
+                        <td>@user.Email</td>
+                        <td>
+                            <a asp-action="EditUser" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
+                            @if (user.Id != 1)
+                            {
+                                <a asp-action="RemoveUser" asp-route-id="@user.Id" class="btn btn-danger">Delete</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    <a href="@Url.Action("AddUser", "Users")" class="add-user-btn">Add New User</a>
+    <a href="@Url.Action("Index", "Blogs")" class="back-btn">Back to Blog Posts</a>
+
+</body>
+</html>

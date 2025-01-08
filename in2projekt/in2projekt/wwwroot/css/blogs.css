@@ -1,0 +1,168 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: #eaeaea; /* Light text for contrast */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header and Title */
+h2 {
+    color: #f1f1f1;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Search Container */
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Adjust width */
+}
+
+    /* Ensure the input and button are the same height */
+    .search-form input,
+    .search-form button {
+        height: 40px;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 8px;
+        border: 1px solid #555;
+    }
+
+    .search-form input {
+        width: 80%; /* Adjust width */
+        background-color: #2d3b4f;
+        color: #eaeaea;
+    }
+
+    .search-form button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+    }
+
+        .search-form button:hover {
+            background-color: #0056b3;
+        }
+
+/* Create new blog post button */
+.create-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+    .create-btn:hover {
+        background-color: #218838;
+    }
+
+/* Blog post container */
+.blog-posts {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-post {
+    background-color: #2e3b4e;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    .blog-post h3 {
+        color: #f1f1f1;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .blog-post a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .blog-post a:hover {
+            text-decoration: underline;
+        }
+
+/* Top-right buttons for admin */
+.top-right-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .top-right-buttons a,
+    .top-right-buttons button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+        margin-bottom: 10px;
+        text-decoration: none;
+        width: 150px;
+        height: 40px; /* Same height for both buttons */
+    }
+
+        .top-right-buttons button:hover,
+        .top-right-buttons a:hover {
+            background-color: #c82333;
+        }
+
+    /* Manage Users button - orange */
+    .top-right-buttons .manage-users {
+        background-color: #fd7e14; /* Orange color */
+    }
+
+        .top-right-buttons .manage-users:hover {
+            background-color: #e86c00;
+        }
+
+    /* Logout button - red */
+    .top-right-buttons .logout {
+        background-color: #dc3545;
+    }
+
+        .top-right-buttons .logout:hover {
+            background-color: #c82333;
+        }

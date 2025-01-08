@@ -1,0 +1,63 @@
+﻿@model IEnumerable<in2projekt.Models.BlogPost>
+
+@{
+    Layout = null;  
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="/css/blogs.css" />
+</head>
+
+<body>
+
+    
+    <div class="top-right-buttons">
+        @if (Context.Session.GetInt32("UserId") == 1)
+        {
+            <a href="@Url.Action("ListUsers", "Users")" class="manage-users">Manage Users</a>
+        }
+        <form method="post" action="@Url.Action("Logout", "Account")" style="display: inline;">
+            <button class="logout">Logout</button>
+        </form>
+    </div>
+
+    
+    <h2>Welcome to the Pardus Blog!</h2>
+
+    
+    <div class="search-container">
+        <form method="get" class="search-form">
+            <input type="text" name="searchTerm" placeholder="Search by title..." value="@Context.Request.Query["searchTerm"]" />
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    
+    <a href="@Url.Action("Create", "Blogs")">
+        <button class="create-btn">Create New Blog Post</button>
+    </a>
+
+    
+    <div class="blog-posts">
+        @if (Model.Any())
+        {
+            @foreach (var blogPost in Model)
+            {
+                <div class="blog-post">
+                    <h3>@blogPost.Title</h3>
+                    <a href="@Url.Action("Details", "Blogs", new { id = blogPost.Id })">Read more and comment</a>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No blog posts found matching your search.</p>
+        }
+    </div>
+
+</body>
+</html>

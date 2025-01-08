@@ -1,0 +1,80 @@
+﻿@model in2projekt.Models.BlogPost
+@{
+    Layout = null;  // Skip the default layout for this page
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="/css/details.css" />
+</head>
+<div class="container">
+    <h3>@Model.Title</h3>
+    <p>@Model.Content</p>
+    <p>
+        Created by:
+        @(Model.User != null ? Model.User.Username : "Unknown User")
+        on @Model.CreatedAt
+    </p>
+
+    <h4>Comments</h4>
+    <div class="comments-section">
+        @if (Model.Comments != null && Model.Comments.Any())
+        {
+            foreach (var comment in Model.Comments)
+            {
+                <div class="comment">
+                    <p>@comment.Content</p>
+                    <p>
+                        By: @(comment.User != null ? comment.User.Username : "Unknown User")
+                        on @comment.CreatedAt
+                    </p>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No comments yet. Be the first to comment!</p>
+        }
+    </div>
+
+    
+    <form method="post" action="@Url.Action("AddComment", "Blogs")">
+        <textarea name="content" required></textarea>
+        <input type="hidden" name="postId" value="@Model.Id" />
+        <button type="submit">Add Comment</button>
+    </form>
+
+
+
+    
+    @{
+        var userId = Context.Session.GetInt32("UserId");
+    }
+
+    @if (Model.user_id == userId)
+    {
+        
+        <div class="edit-btn">
+            <a href="@Url.Action("Edit", "Blogs", new { id = Model.Id })">
+                <button>Edit Post</button>
+            </a>
+        </div>
+
+        
+        <div class="delete-btn">
+            <a href="@Url.Action("ConfirmDelete", "Blogs", new { id = Model.Id })">
+                <button>Delete Post</button>
+            </a>
+        </div>
+    }
+
+    
+    <div class="back-btn">
+        <a href="@Url.Action("Index", "Blogs")">
+            <button>Back to All Blog Posts</button>
+        </a>
+    </div>
+</div>

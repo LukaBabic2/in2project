@@ -1,0 +1,119 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Dark blue background */
+    color: #eaeaea; /* Light text for contrast */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header and Title */
+h2 {
+    color: #f1f1f1;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Back Button */
+.back-btn {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+    .back-btn:hover {
+        background-color: #5a6268;
+    }
+
+/* User Table */
+.user-table-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #2e3b4e;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .user-table th, .user-table td {
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    .user-table th {
+        background-color: #2d3b4f;
+        color: #f1f1f1;
+    }
+
+    .user-table td {
+        background-color: #3b4a61;
+        color: #eaeaea;
+    }
+
+    .user-table tr:nth-child(even) td {
+        background-color: #2e3b4e;
+    }
+
+    /* Buttons for actions */
+    .user-table a.btn {
+        padding: 8px 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        transition: background-color 0.3s;
+    }
+
+    .user-table .btn-primary {
+        background-color: #007bff;
+    }
+
+        .user-table .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .user-table .btn-danger {
+        background-color: #dc3545;
+    }
+
+        .user-table .btn-danger:hover {
+            background-color: #c82333;
+        }
+
+/* Add New User Button */
+.add-user-btn {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+    .add-user-btn:hover {
+        background-color: #218838;
+    }

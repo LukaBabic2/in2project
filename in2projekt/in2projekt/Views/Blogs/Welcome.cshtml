@@ -1,0 +1,31 @@
+﻿@model IEnumerable<in2projekt.Models.BlogPost>
+
+@{
+    Layout = null;  // Skip the default layout for this page
+}
+
+<h2>Welcome, @User.Identity.Name!</h2>
+
+<p>Here are the latest blog posts:</p>
+
+
+@foreach (var post in Model)
+{
+    <div>
+        <h3>@post.Title</h3>
+        <p>@post.Content</p>
+        <p>Created by: @post.User.Username on @post.CreatedAt</p>
+
+       
+        @if (post.User.Username == User.Identity.Name)
+        {
+            <a href="@Url.Action("Edit", "Blogs", new { id = post.Id })">Edit</a>
+            < a href = "@Url.Action("Delete", "Blogs", new { id = post.Id })" > Delete </ a >
+       }
+
+        
+        <a href="@Url.Action("Details", "Blogs", new { id = post.Id })">Read more and comment</a>
+    </div>
+}
+
+<a href="@Url.Action("Create", "Blogs")">Create New Blog Post</a>
